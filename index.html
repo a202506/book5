@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五本书</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f5f1;
+      --text: #24211d;
+      --muted: #6d675f;
+      --line: #d8d2c8;
+      --accent: #2d5f8a;
+      --accent-hover: #1e4567;
+      --panel: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    main {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 40px 0 48px;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .book {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 3 / 4.2;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      box-shadow: 0 12px 28px rgba(36, 33, 29, 0.12);
+      color: var(--text);
+      font-family: KaiTi, STKaiti, "KaiTi_GB2312", serif;
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .cover img.cover-left-half {
+      /* width: 200%; */
+      max-width: none;
+      object-fit: cover;
+      object-position: left center;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 36px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .links a {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      color: #fff;
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      outline: none;
+    }
+
+    @media (max-width: 840px) {
+      main {
+        width: min(680px, calc(100% - 28px));
+        padding-top: 28px;
+      }
+
+      .books {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 430px) {
+      .books {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <section class="books">
+       <article class="book">
+        <a class="cover" href="tagore/index.html">
+          <img src="tagore/tagore-cover.jpg">
+        </a>
+        <div class="links">
+          <a href="tagore/index.html">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="123%E2%88%9E/123%E2%88%9E.pdf">
+          <img src="123%E2%88%9E/123%E2%88%9E-cover.jpg">
+        </a>
+        <div class="links">
+          <a href="123%E2%88%9E/123%E2%88%9E.pdf">PDF</a>
+          <a href="123%E2%88%9E/index.html">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="prince/index.html">
+          <img src="prince/images/04.jpg">
+        </a>
+        <div class="links">
+          <a href="prince/prince.pdf">PDF</a>
+          <a href="prince/index.html">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="walden/index.html">
+          <img class="cover-left-half" src="walden/walden-cover.jpg">
+        </a>
+        <div class="links">
+          <a href="walden/walden.pdf">PDF</a>
+          <a href="walden/index.html">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="dynasties/index.html">
+          <img src="dynasties/dynasties-cover.jpg">
+        </a>
+        <div class="links">
+          <a href="dynasties/dynasties.pdf">PDF</a>
+          <a href="dynasties/index.html">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="https://usxus.netlify.app">
+          <img src="https://usxus.netlify.app/us-vs-us-cover.jpg" alt="美国反对美国">
+        </a>
+        <div class="links">
+          <a href="https://usxus.netlify.app">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="https://pbest.netlify.app">
+          <img src="https://pbest.netlify.app/Cover.jpg" alt="做最好的自己">
+        </a>
+        <div class="links">
+          <a href="https://pbest.netlify.app">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="https://dulala.netlify.app/">
+          <img src="https://dulala.netlify.app/images/1.jpg" alt="杜拉拉升职记">
+        </a>
+        <div class="links">
+          <a href="https://dulala.netlify.app/">HTML</a>
+        </div>
+      </article>
+
+      <article class="book">
+        <a class="cover" href="https://beyond83.netlify.app/">
+          <img src="https://beyond83.netlify.app/beyond.jpg" alt="">
+        </a>
+        <div class="links">
+          <a href="https://beyond83.netlify.app/">HTML</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
